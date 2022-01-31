@@ -19,6 +19,19 @@ body{
     width: 90%;
     margin:  auto;
 }
+.btn{
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+}
+.btn_primary{
+    color: #ffff;
+    background: #16a083;
+}
 /* ####navbarstyle for desktop mode#### */
 
 .navbar  input[type="checkbox"],.navbar .hamburger_line{
@@ -32,14 +45,12 @@ body{
     color: #000;
     opacity: 0.8;
     z-index: 1000;
-    /* position: relative; */
+    
 }
-.navbar li{
-    list-style: none;
-}
+
 .navbar_container{
     display: flex;
-    /* flex-direction: row-reverse; */
+    
     justify-content: space-between;
     height: 64px;
     align-items: center;
@@ -52,10 +63,12 @@ body{
 .menu_iteams li{
     margin-left: 1.8rem;
     font-size: 2rem;
+    list-style: none;
 }
 
 .logo{
     order: 1;
+    font-size: 3rem;
 }
 .navbar a{
     text-decoration: none;
@@ -64,211 +77,172 @@ body{
     transition: color 0.5s ease-in-out;
 }
 .navbar a:hover{
-    color: palevioletred;
-    /* transition: color 5s ease-in-out; */
+    color: #117964;
 }
-/* showcase area */
-/* first i will try to solve the problems by my own basis then i */
-/* this is the only way to master css */
+
+/* #####showcase style#### */
 .showcase{
     height: 50vh;
-    /* border: 2px solid red; */
-    /* position: absolute; */
-    width: 100%;
-    /* height: 300px; */
-    /* margin-bottom: 10rem;
-    margin-top: 2rem;
-    text-align: center; */
-    /* transform: translate(); */
-    /* background: url("./header-image2.jpg"); */
     background: url("./img/header-image2.jpg");
-    background-position:center;
-    /* background-position: 5rem; */
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    /* border-image-width: 20%; */
-    /* box-shadow: #aaa; */
-    
-
 }
-.helper{
-    /* border: 1px solid green; */
-    /* margin-top: 7rem; */
+.showcase_container{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
+    font-size: 1.6rem;
 }
-.helper p{
-    font-size: 1.5rem;
-    font-weight: 500;
-    padding-bottom: 1rem;
-}
-.helper a{
-    /* display: block; */
-    /* border-radius: 2px solid blue; */
-    /* border: 2px solid blue; */
-    display: inline-block;
-    margin-top: 1em;
-    border-radius: 50px;
-    
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #168a03;
-    padding: 1em 2.5em;
-    cursor: pointer;
-    outline: none;
 
-}
-/* about us area */
+/* #####about us style### */
 .aboutus{
-    /* position: absolute; */
-    padding: 50px 0;
-    margin-top: 2rem;
-     /* border: 5px solid black; */
-    /* width: 100%;  */
-    /* top: 70%; */
-    /* height: 50vh; */
-    box-shadow: 0px 5px 10px 0px #aaa;
-    background: #f5f5f7;
-    /* display: flex; */
-    /* justify-content: space-between; */
-
+    padding: 5rem 0;
+    background-color: #f5f5f7;
 }
- .abs{
-    margin: 0 auto;
+.abs{
     display: flex;
-    justify-content: space-between;
-    height: 100%;
     flex-wrap: wrap;
 }
-  .abs1{
-     /* width: 50%; */
-     flex:1 1 400px;
-     padding: 30px;
-    /* border: 2px solid blue; */
-    margin:  auto;
-    padding-bottom: 2rem;
-    height: 90%; 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    transform: translateX(-150%);
-    animation: textani 1s ease-in-out ;
-    animation-fill-mode: forwards;
- } 
- @keyframes textani {
-     100%{
-         transform: translate(0%);
-     }
-     
- }
-  .abs2{
-    /* width: 50%; */
+.abs1{
     flex:1 1 400px;
-    padding: 30px;
-    max-width: 100%;
-    /* border: 2px solid blue; */
-    margin: 3rem auto;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    height: 100%; 
-    transform: translateX(150%);
-
-    /* flex:1 1 400px;
-    padding: 30px; */
-    /* background-image: url("../resturent/../img/vendor/img/about-photo.jpg"); */
-    /* background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat; */
-    /* display: block; */
-    animation: imgani 1s ease-in-out ;
-    animation-fill-mode: forwards;
-
-} 
-@keyframes imgani {
+    padding: 3rem;
+    margin: auto;
+    transform: translate(-150%);
+    animation: atext 1s ease-in-out forwards;
+}
+@keyframes atext {
     100%{
         transform: translate(0%);
     }
 }
-.aboutus .abs2 img{
+.abs2{
+    flex:1 1 400px;
+    padding: 3rem;
+    transform: translate(150%);
+    animation: aimg 1s ease-in-out forwards;
+}
+@keyframes aimg {
+    100%{
+        transform: translate(0%);
+    }
+}
+.abs2 img{
     display: block;
+    height: 40rem;
     max-width: 100%;
-    /* width: 80%; */
-    height: 400px;
-    /* padding-bottom: 5rem; */
+    margin: auto;
     object-fit: cover;
     object-position: right;
-    margin: auto;
-
 }
-.tfood{
-    /* height: 50vh;
-    width: 100%;
-    /* margin-top: 3rem; */
-  /*  border: 2px solid red;
-    margin: 3rem auto;
-    text-align: center; */
+
+/* ######types of food section#### */
+.food{
     padding: 5rem 0 10rem 0;
-
 }
-.tfood h2{
-    padding-top: 3rem;
+.food h2{
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
 }
 .food_container{
-    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
 }
-
 .food_container img{
     display: block;
-    /* max-width: 100%; */
     width: 100%;
+    margin: auto;
     max-height: 30rem;
-    /* height: 20rem; */
     object-fit: cover;
     object-position: center;
-    /* margin: auto; */
 }
- 
-.btn{
-    display: inline-block;
-    margin-top: 1em;
-    border-radius: 50px;
-    
-    text-decoration: none;
-    font-size: 2rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: #168a03;
-    padding: 1em 2.5em;
-    cursor: pointer;
-    outline: none;
-}
-
- /* .img_content{
-    position: absolute;
-    top: 70%;
-    /* left: 50%; */
-    /* transform: translate(-50%,-50%); */
-/* }  */
-
- .img_container{
+.img_container{
     margin: 0 1rem;
     position: relative;
 }
 .img_content{
     position: absolute;
-     /* top: 70%;
-    left: 50%;  */
-    /* bottom: 1%; */
-    /* here is some bug occure let's  */
-    /* fix it tomorrow */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index:2;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.5s ease-in-out 0.2s;
 }
+.img_content h3{
+    color: #fff;
+    font-size: 3rem;
+}
+.img_container::after{
+    content: "";
+    /* border: 2px solid green; */
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    z-index: 1;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: all 0.7s ease-in-out;
+    
+
+
+}
+.img_container:hover .img_content{
+    opacity: 1;
+    top: 50%;
+    left: 50%;
+}
+.img_container:hover::after{
+    opacity: 1;
+}
+
+/* #####food menu section#### */
+
+
+.food_menu h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+}
+.food_menu_container{
+    display: flex;
+    
+    flex-wrap: wrap;
+    padding: 5rem 0 3rem 0;
+}
+.food_menu_container img{
+    display: block;
+    width: 25rem;
+    height: 25rem;
+    
+    border-radius: 50%;
+    
+    object-fit: cover;
+    object-position: center;
+}
+.food_menu_iteams{
+    display: flex;
+    flex: 1 1 600px;
+    margin-bottom: 3rem;
+    justify-content: space-between;
+}
+.txtsec{
+    margin: auto 1.5rem;
+}
+.price{
+    color: #117964;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
 
