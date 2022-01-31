@@ -80,7 +80,8 @@ body{
     margin-top: 2rem;
     text-align: center; */
     /* transform: translate(); */
-    background: url("../resturent/../img/vendor/img/header-image2.jpg");
+    /* background: url("./header-image2.jpg"); */
+    background: url("./img/header-image2.jpg");
     background-position:center;
     /* background-position: 5rem; */
     background-size: cover;
